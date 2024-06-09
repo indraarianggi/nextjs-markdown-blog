@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Markdown from "markdown-to-jsx";
 
 import { getPostContent, getPostMetadata } from "@/helpers";
@@ -5,6 +6,17 @@ import { getPostContent, getPostMetadata } from "@/helpers";
 interface Props {
   params: { slug: string };
 }
+
+// Generate meta data for post page
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const post = getPostContent(params.slug);
+  return {
+    title: post.data.title,
+    description: post.data.subtitle,
+  };
+};
 
 // To statically generate page (SSG) for each posts
 export const generateStaticParams = async () => {
