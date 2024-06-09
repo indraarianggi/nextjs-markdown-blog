@@ -1,3 +1,11 @@
+# Next.js Markdown Blog
+
+## References
+
+1. [Tutorial NextJS 13: Membuat Blog Statis dari File Markdown](https://youtu.be/Hiabp1GY8fA?si=PZ0mGiJLWJS902FH)
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
