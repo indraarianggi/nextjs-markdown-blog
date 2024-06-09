@@ -8,12 +8,12 @@ interface Props {
 
 export default function PostPreview({ post }: Props) {
   return (
-    <div key={post.slug}>
+    <div className="border border-slate-300 p-4 rounded-md shadow-sm bg-white">
+      <p className="text-sm text-slate-400">{post.date}</p>
       <Link href={`/post/${post.slug}`}>
-        <h2>{post.title}</h2>
+        <h2 className="text-violet-600 hover:underline mb-4">{post.title}</h2>
       </Link>
-      <p>{post.subtitle}</p>
-      <p>{post.date}</p>
+      <p className="text-slate-700">{post.subtitle}</p>
     </div>
   );
 }

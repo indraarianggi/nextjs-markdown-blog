@@ -8,8 +8,8 @@ export default function Home() {
   ));
 
   return (
-    <main>
-      <div>{postPreviews}</div>
+    <main className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {postPreviews}
     </main>
   );
 }

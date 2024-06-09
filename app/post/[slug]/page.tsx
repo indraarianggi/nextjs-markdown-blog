@@ -34,10 +34,16 @@ export default function PostPage(props: Props) {
 
   return (
     <div>
-      <h1>Post: {slug}</h1>
-      {/* show the post content */}
-      <h1>{post.data.title}</h1>
-      <Markdown>{post.content}</Markdown>
+      <div className="my-8 text-center">
+        <h1 className="text-2xl text-violet-600">{post.data.title}</h1>
+        <p className="text-slate-400 mt-2">{post.data.date}</p>
+      </div>
+      <Markdown
+        options={{ wrapper: "article", forceWrapper: true }}
+        className="prose"
+      >
+        {post.content}
+      </Markdown>
     </div>
   );
 }
